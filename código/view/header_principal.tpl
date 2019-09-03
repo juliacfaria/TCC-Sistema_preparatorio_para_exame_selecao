@@ -22,18 +22,17 @@
       </button>
 
 
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" href="#"><img src="../imagens/logo.PNG" class="img-fluid"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
 
         <li class="class="nav-item dropdown nav-item active>
-          <a href="#" class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a href="#" class="nav-link dropdown " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="glyphicon glyphicon-pencil">&ensp;</span>Testar Conhecimento</a>
-          </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Questões</a>
-                      <a class="dropdown-item" href="#">Simulado</a>
+                      <a class="dropdown-item list-group-item list-group-item-danger" href="#">Questões<br></a>
+                      <a class="dropdown-item list-group-item list-group-item-danger" href="#">Simulado</a>
             </div>
         </li>
         <li><a href="#"><span class="glyphicon glyphicon-signal">&ensp;</span>Desempenho</a></li>

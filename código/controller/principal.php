@@ -11,10 +11,10 @@
 	
 
 	//verificando se a sessao existe
-	if (!isset($_SESSION['logado'])) {
+	/*if (!isset($_SESSION['logado'])) {
 		header("Location: login.php");
 	}
-
+*/
 	//dados usuário
 	/*$id = $_SESSION['id_usuario'];
 	$sql = "SELECT * from usuarios where id = '$id'";
@@ -23,8 +23,10 @@
 
 	//fechando a conexão. Boa prática
 	mysqli_close($connect);
+
+	echo "<a href='logout.php'>Sair</a>";
+	require_once 'includs/footer_principal.php';
 ?>
 
-	<a href="logout.php">Sair</a>
+	
 
-	require_once 'includs/footer_principal.php';

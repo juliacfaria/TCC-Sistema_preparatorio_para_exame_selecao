@@ -1,7 +1,7 @@
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
-      background-color: #570600;
+      background-color: #570600;    
     }
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -33,9 +33,9 @@
     .dropdown:hover>.dropdown-menu{
             display: block;
     }
-
-    .footer{
+.footer{
     position:absolute;
     bottom:0;
     width:100%;
-  }
+    background-color:#4f0500;
+}
