@@ -36,102 +36,58 @@
         
                       <div class="col-md-3 mb-3 form-group form-row">
           
-                          <label for="validationServer04">Estado</label>
-          
-                          <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Estado" required name="estado">
-          
-                          <div class="invalid-feedback">
-
-                              Por favor, informe um estado válido.
-
-                          </div>
+                          <div class="form-group input-group col-md-4 mb-3">
+                           <div class="input-group-prepend">
+                             <label class="input-group-text" for="inputGroupSelect01">Estado</label>
+                           </div>
+                           <select class="form-control" id="inputGroupSelect01">
+                             <option selected value="mg">MG</option>
+                             <option value="sp">SP</option>
+                             <option value="rj">RJ</option>
+                             <option value="es">ES</option>
+                           </select>
+                         </div>
         
                       </div>
 
-                      <div class="col-md-3 mb-3 form-group form-row">
+                      <div class="col-md-4 mb-3 form-group form-row">
           
-                          <label for="validationServer05">cpf</label>
+                          <label for="validationServer05">CPF</label>
          
                           <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="CPF" required name="cpf">
           
-                          <div class="invalid-feedback">
-            
-                              Por favor, informe um cpf válido.
-          
-                          </div>
         
                       </div>
 
+                      <div class="col-md-4 mb-3 form-group form-row">
+          
+                          <label for="validationServer05">Telefone</label>
+         
+                          <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Telefone" required name="telefone">
+        
+                      </div>
+                      <br>
+                      <br>
 
-                      <div class="input-group col-md-3 mb-3">
-                          <div class="input-group-prepend">
-                            <div class="form-check form-row ">
+                      <div class="col-md-4 mb-3 form-group">
+          
+                          <div class="form-group input-group col-md-6 mb-3">
+                           <div class="input-group-prepend">
+                             <label class="input-group-text" for="inputGroupSelect01">Curso de interesse</label>
+                           </div>
+                           <select class="form-control" id="inputGroupSelect02">
+                             <option selected value="informatica">Informática</option>
+                             <option value="agropecuaria">agropecuária</option>
+                             <option value="eletronica">eletrônica</option>
+                             <option value="eletrotécnica">eletrotécnica</option>
+                             <option value="hospedagem">hospedagem</option>
+                             <option value="alimentos">alimentos</option>
+                           </select>
+                         </div>
 
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                  Agropecuária
-                                </label>
-
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="input-group col-md-3 mb-3">
-                          <div class="input-group-prepend">
-                            <div class="form-check form-row ">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                  Alimentos
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="input-group col-md-3 mb-3">
-                          <div class="input-group-prepend">
-                            <div class="form-check form-row ">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                  Eletrônica
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="input-group col-md-3 mb-3">
-                          <div class="input-group-prepend">
-                            <div class="form-check form-row ">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                  Eletrotécnica
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="input-group col-md-3 mb-3">
-                          <div class="input-group-prepend">
-                            <div class="form-check form-row ">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                  Informática
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="input-group col-md-3 mb-3">
-                          <div class="input-group-prepend">
-                            <div class="form-check form-row ">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                  Hospedagem
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+                      </div>
+                      <br>
+                      <br>
 
                     <div class="form-group">
                           <label for="exampleInputEmail1">Endereço de email:</label>
