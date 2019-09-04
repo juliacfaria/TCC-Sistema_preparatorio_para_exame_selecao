@@ -35,9 +35,28 @@
 }
 
 .footer{
+    position: fixed;
     bottom:0;
     width:100%;
 }
+
+.a{
+    text-align: center;
+    font-family: Avantgarde;
+    font-weight: bold;
+}
+
+.b{
+    text-align: justify;
+    font-family: Avantgarde;
+}
+
+.c{
+    font-family: Avantgarde;
+    font-weight: bold;
+    text-align: left;
+}
+
 /*@media only screen and (max-width: 678px){
     .bg{
         background-size: 300%;

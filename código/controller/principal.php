@@ -26,7 +26,7 @@
 	mysqli_close($connect);
 
 	echo "<a href='logout.php'>Sair</a>";
-	require_once 'includs/footer_principal.php';
+	require_once 'includs/footer.php';
 ?>
 
 	

@@ -22,7 +22,7 @@
       </button>
 
 
-      <a class="navbar-brand" href="#"><img src="../imagens/logo.PNG" class="img-fluid"></a>
+      <a class="navbar-brand" href="principal.php"><img src="../imagens/logo.PNG" class="img-fluid"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -37,7 +37,7 @@
         </li>
         <li><a href="#"><span class="glyphicon glyphicon-signal">&ensp;</span>Desempenho</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-list-alt">&ensp;</span>Ranking</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-book">&ensp;</span>Conteúdo Programático</a></li>
+        <li><a href="conteudoProgramatico.php"><span class="glyphicon glyphicon-book">&ensp;</span>Conteúdo Programático</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-pushpin">&ensp;</span>Materiais Recomendados</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-comment">&ensp;</span>Feedback</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-calendar">&ensp;</span>Plano de Estudos</a></li>
