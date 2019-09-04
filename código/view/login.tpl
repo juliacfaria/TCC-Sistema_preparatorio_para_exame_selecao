@@ -28,7 +28,7 @@
                     
                   <div class="form-group">
                     <label for="password">
-                       <a class="label-link" href="/password_reset">Esqueci a senha</a>
+                       <a class="label-link" href="esqueceuSenha.php">Esqueci a senha</a>
                     </label>
                   </div>
 
