@@ -8,7 +8,7 @@
     </div>
 
     <div class="col-sm-4 text-left"> 
-      <form class="form-container col-6 col-sm-4 col-md-2" method="post" action="../controller/login.php">
+      <form class="form-container col-6 col-sm-4 col-md-2" method="post" action="login.php">
                     
                   <div class="form-group">
                     <label for="exampleInputEmail1">Endereço de email:</label>

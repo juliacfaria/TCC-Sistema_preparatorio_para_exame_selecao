@@ -11,6 +11,8 @@ $db_name = "tcc";
 //conectando
 $connect = mysqli_connect($servername, $username, $password, $db_name); //parâmetros são as variáveis criadas anteriormente, os nomes são autoexplicativos
 
+mysqli_set_charset($connect,"utf-8");
+
 //o mysqli tem suporte à orientação de objetos e ao php procedural, já o pdo só suporta a orientação a objetos
 
 if(mysqli_connect_error()){	//verifica se deu algum erro na conexão

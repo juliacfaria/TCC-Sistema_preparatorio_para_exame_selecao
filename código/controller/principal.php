@@ -11,11 +11,12 @@
 	
 
 	//verificando se a sessao existe
-	/*if (!isset($_SESSION['logado'])) {
+	if (!isset($_SESSION['logado'])) {
 		header("Location: login.php");
 	}
-*/
-	//dados usuário
+
+	header_remove();
+//dados usuário
 	/*$id = $_SESSION['id_usuario'];
 	$sql = "SELECT * from usuarios where id = '$id'";
 	$resultado = mysqli_query($connect, $sql);
