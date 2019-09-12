@@ -37,9 +37,10 @@
 				if (password_verify($senha, $senhadb)) {
 					echo "ta verificado irmao";
 					$_SESSION['logado'] = true;	//salvando dados na session
+					$_SESSION['id'] = $dado['id'];
 					header('Location: principal.php');
 				}
-
+				/*
 				$sql = "SELECT * from usuarios WHERE email = '$email' AND senha = '$senha'";	//verifica se há um login e uma senha igual aos digitados pelo usuário
 				$resultado = mysqli_query($connect, $sql);
 
@@ -48,7 +49,8 @@
 					$_SESSION['logado'] = true;	//salvando dados na session
 					$_SESSION['id_usuario'] = $dados['id'];
 					header('Location: principal.php');	//encaminha para outra page
-				}else{
+				}*/
+				else{
 					$erros[] = "Usuário e senha não conferem";
 					echo "email e senha nao conferem irmao";
 				}

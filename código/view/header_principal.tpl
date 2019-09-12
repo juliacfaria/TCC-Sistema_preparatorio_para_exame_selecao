@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../css/estilo_principal.css">
+  <link rel="stylesheet" type="text/css" href="../css/estilo_perfil.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   
@@ -43,7 +44,7 @@
         <li><a href="#"><span class="glyphicon glyphicon-calendar">&ensp;</span>Plano de Estudos</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user">&ensp;</span>Perfil</a></li>
+        <li><a href="perfil.php"><span class="glyphicon glyphicon-user">&ensp;</span>Perfil</a></li>
       </ul>
     </div>
   </div>
