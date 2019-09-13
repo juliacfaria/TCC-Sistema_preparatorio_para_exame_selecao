@@ -35,6 +35,15 @@
 
 			                </div>
 
+			                <div class="form-group">
+			                    <label class="col-md-3 col-xs-12 control-label">Pontuação</label>
+
+			                    <div class="col-md-9 col-xs-12">
+			                        <input class="form-control"  type="text" name="pontuacao" size="25" disabled />
+			                    </div>
+
+			                </div>
+
 			                
 			                <hr />
 
