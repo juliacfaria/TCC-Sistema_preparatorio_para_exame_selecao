@@ -110,6 +110,24 @@
 
 	}
 
+	if (isset($_POST['excluir'])) {
+		$sql5 = "DELETE from usuarios where id = '$id'";
+
+		if (mysqli_query($connect, $sql5)) {	//verifica se conectou
+			$_SESSION['mensagem'] = "conta";
+			echo "conta apagada com sucesso";
+			echo "<script>location.href='login.php';</script>";
+			session_unset();
+			session_destroy();
+		}else{
+			$_SESSION['mensagem'] = "erro ao apagar conta";
+			echo "erro ao apagar conta";
+		}
+		
+		mysqli_close($connect);
+
+	}
+
 	dados($id,$connect);
 
 	
