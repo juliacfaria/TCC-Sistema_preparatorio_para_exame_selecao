@@ -32,7 +32,7 @@
           <a href="#" class="nav-link dropdown " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="glyphicon glyphicon-pencil">&ensp;</span>Testar Conhecimento</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item list-group-item list-group-item-danger" href="#">Questões<br></a>
+                      <a class="dropdown-item list-group-item list-group-item-danger" href="questoes.php">Questões<br></a>
                       <a class="dropdown-item list-group-item list-group-item-danger" href="#">Simulado</a>
             </div>
         </li>

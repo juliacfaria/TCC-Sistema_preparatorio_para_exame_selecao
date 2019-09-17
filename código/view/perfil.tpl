@@ -179,7 +179,7 @@
 
 			            <button class="btn fundo3 btn-lg" type="submit" name="atualizar">
 			                Atualizar Dados</button>
-			            <button class="btn fundo3 btn-lg" type="submit" name="excluir">
+			            <button class="btn fundo3 btn-lg" type="submit" name="excluir"  data-toggle="modal" data-target="#excluirModal">
 			                Excluir Conta</button>
 
 			        </div>
