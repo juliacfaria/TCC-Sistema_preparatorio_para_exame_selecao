@@ -7,8 +7,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../css/estilo_principal.css">
   <link rel="stylesheet" type="text/css" href="../css/estilo_perfil.css">
+  <link rel="stylesheet" type="text/css" href="../css/estilo_questao.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
   
 </head>
 <body>
@@ -28,7 +30,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
 
-        <li class="class="nav-item dropdown nav-item active>
+        <li>
           <a href="#" class="nav-link dropdown " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="glyphicon glyphicon-pencil">&ensp;</span>Testar Conhecimento</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -44,7 +46,18 @@
         <li><a href="#"><span class="glyphicon glyphicon-calendar">&ensp;</span>Plano de Estudos</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="perfil.php"><span class="glyphicon glyphicon-user">&ensp;</span>Perfil</a></li>
+
+        <li>
+          <a href="#" class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="glyphicon glyphicon-user">&ensp;</span>Dados pessoais</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item list-group-item list-group-item-danger" href="perfil.php">Meu perfil<br></a>
+             <a class="dropdown-item list-group-item list-group-item-danger" href="#" disabled>Adicionar questões</a>
+             <a class="dropdown-item list-group-item list-group-item-danger" href="logout.php">Sair</a>
+          </div>
+        </li>
+
+
       </ul>
     </div>
   </div>

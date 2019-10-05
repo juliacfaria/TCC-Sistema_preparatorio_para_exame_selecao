@@ -21,8 +21,8 @@
 			    <div class='col-md-8 col-sm-8 col-xs-12'>
 			        
 			                
-			        <div class='d_questoes'>
-			                    <div class='dificuldade0 panel panel-primary' id='d_questao_".$row['id']."' tempo='0'>
+			        <div>
+			                    <div class='panel panel-danger' id='d_questao_".$row['id']."' tempo='0'>
 			            
 			                <div class=''>
 			                
@@ -36,7 +36,7 @@
 			                                </h3>
 			                                
 			                                   <span>
-			                                    Matéria  Ano
+			                                    " .$row['materia']." " .$row['ano']."
 			                                   </span>                                    
 			                        </div>
 			 
@@ -72,62 +72,66 @@
 			                        
 			                        <div class='form form-group'>
 
-			                                <label class='check btn-block ' onclick=''>
+			                                <label class='check btn-block letra ' onclick=''>
 			                                            
-			                                    <span class='letra'>
+			                                    <span>
 			                                                
 			                                            <input type='radio' class='icheckbox' name='resposta_985215' value='2' onchange='responderMarcar('985215',this);'/>
-			                                                a)            
+			                 								a) ".$row['a']."&nbsp;   
 			                                    </span>
 			                                                
-			                                    <p>".$row['correta']."&nbsp;</p>                                            
+			                                                                                
 			                                                                        
 			                                            
 			                                </label>
 			                                                                                
-			                                <label class='check btn-block ' onclick=''>
+			                                <label class='check btn-block letra' onclick=''>
 			                                            
-			                                    <span class='letra'>
+			                                    <span >
 			                                                
 			                                            <input type='radio' class='icheckbox' name='resposta_985215' value='2' onchange='responderMarcar('985215',this);'/>
-			                                                b)            
+			                                                b) ".$row['b']."&nbsp;          
 			                                    </span>
-			                                                
-			                                    <p>".$row['incorreta1']."&nbsp;</p>                                            
-			                                                                        
 			                                            
 			                                </label>
 			                                                                                
 
-			                                <label class='check btn-block ' onclick=''>
+			                                <label class='check btn-block letra' onclick=''>
 			                                            
-			                                    <span class='letra'>
+			                                    <span>
 			                                                
 			                                            <input type='radio' class='icheckbox' name='resposta_985215' value='2' onchange='responderMarcar('985215',this);'/>
-			                                                c)            
+			                                                c) ".$row['c']."&nbsp;       
 			                                    </span>
-			                                                
-			                                    <p>".$row['incorreta2']."&nbsp;</p>                                            
-			                                                                        
-			                                            
+			                               
 			                                </label>
 			                                                                                
 
-			                                <label class='check btn-block ' onclick=''>
+			                                <label class='check btn-block letra' onclick=''>
 			                                            
-			                                    <span class='letra'>
+			                                    <span>
 			                                                
 			                                            <input type='radio' class='icheckbox' name='resposta_985215' value='3' onchange='responderMarcar('985215',this);'>
-			                                                d)
+			                                                d) ".$row['d']."&nbsp;
 			                                                
 			                                    </span>
-			                                             
-			                                    <p>".$row['incorreta3']."&nbsp;</p>                                                                               
-			                                            
+			                                           
 			                                </label>
 			                                
-			                                <button type='button' class='btn fundo3 btn-lg push-up-10' onclick='responder('985215',this);'>
+			                                <button type='button' class='btn fundo3 btn-lg push-up-10' onclick='responder()'>
 			                                Responder</button>
+
+			                                <input type='text' id='p'>
+
+			                                <input type='hidden' id='resp' value='".$row['correta']."'>
+
+			                                <script>
+			                                	function responder(){
+			                                		document.getElementById('p').value = document.getElementById('resp').value;
+			                                		
+			                                	};
+
+			                                </script>
 			                                                            
 			                        </div>
 
