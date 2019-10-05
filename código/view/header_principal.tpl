@@ -52,7 +52,7 @@
           <span class="glyphicon glyphicon-user">&ensp;</span>Dados pessoais</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
              <a class="dropdown-item list-group-item list-group-item-danger" href="perfil.php">Meu perfil<br></a>
-             <a class="dropdown-item list-group-item list-group-item-danger" href="#" disabled>Adicionar questões</a>
+             <a class="dropdown-item list-group-item list-group-item-danger" href="adicionarQuestoes.php" disabled>Adicionar questões</a>
              <a class="dropdown-item list-group-item list-group-item-danger" href="logout.php">Sair</a>
           </div>
         </li>

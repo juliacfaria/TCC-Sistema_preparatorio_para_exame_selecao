@@ -129,7 +129,7 @@
 			                <hr />
 
 			                
-			                    <h3>Senha e Login</h3>
+			                    <h3>Alterar Senha</h3>
 
 			                    <div class="form-group">
 			                        <label class="col-md-3 col-xs-12 control-label">Senha</label>
@@ -189,9 +189,9 @@
 		</div>
 	</div>
 
-			<div class="col-sm-2 ">
+	<div class="col-sm-2 ">
 
-			</div>
+	</div>
 
    </div>
 </div>

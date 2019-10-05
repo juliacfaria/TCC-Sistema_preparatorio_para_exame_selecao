@@ -7,17 +7,12 @@
     <div class='col-md-8 col-sm-8 col-xs-12'>
         
                 
-       
+        
     
     </div>
     
     <div class='col-md-3 col-sm-3 col-xs-12 d_questoes_lateral print_no'>
-    <div>    
-        
-                
-        
-        
-    </div>
+   
     </div>
     
 </div>
