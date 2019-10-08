@@ -7,7 +7,7 @@
 
 	<div class="col-sm-8 ">
 
-		<form class="form" action="adicionarQuestoes.php" method="post" enctype=”multipart/form-data”>
+		<form class="form" action="adicionarQuestoes.php" method="post" enctype="multipart/form-data">
 
 			    <div>
 
@@ -157,7 +157,7 @@
 
 			                <label class="col-md-3 col-xs-12 control-label">Imagem da Questão (se houver):</label>
 			                <div class="col-md-9 col-xs-12">
-			                	<input type='file' name='arquivo'>	
+			                	<input type='file' name='foto'>	
 
 			                </div>
 

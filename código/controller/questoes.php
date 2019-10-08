@@ -51,11 +51,11 @@
 
 			                            if (!empty($row['imagem'])) {
 
-											echo "<p><img height='260' src='../imagens/".$row['imagem']."' width='402' /></p>";
+											echo "<p><img height='260' src='../imagens/imagensQuestoes/".$row['imagem']."' width='402' /></p>";
 
 			                         	}
 
-			                         	if (!empty($row['imagem'])) {
+			                         	if (!empty($row['enunciado2'])) {
 
 											echo "<p>".$row['enunciado2']."</p>";
 
