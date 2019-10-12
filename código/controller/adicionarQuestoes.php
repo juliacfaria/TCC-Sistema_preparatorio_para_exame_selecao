@@ -30,9 +30,11 @@
 	            $valor = rand(0,10000);
 	            $novo_nome = "$valor.$extensao";
 
-	            if (move_uploaded_file($temporario, $pasta.$novo_nome)) {	//verifica se o upload foi realizado
-	                echo "Upload feito com sucesso!";
 
+	            if (copy($temporario,"../imagens/imagensQuestoes/".$novo_nome)){
+			         echo "Arquivo copiado com sucesso";
+			    
+	            
 	                $sql = "INSERT INTO questoes(enunciado, a, b, c, d, imagem, enunciado2, pedidoQuestao,correta,materia,ano) VALUES ('$enunciado1','$a','$b','$c','$d','$novo_nome','$enunciado2','$pedidoQuestao','$correta','$materia','$ano')";	//insere no banco de dadoss
 		
 
