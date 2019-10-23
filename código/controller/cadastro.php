@@ -26,7 +26,7 @@
         $genero = $_POST['genero'];
         $cpf = mysqli_escape_string($connect, $_POST['cpf']);
 
-		$sql = "INSERT INTO usuarios(nome, email, senha, cpf, cidade, estado, telefone, curso,genero,data) VALUES ('$nome','$email','$senha','$cpf','$cidade','$estado','$telefone','$cursoInteresse','$genero','$data')";	//insere no banco de dadoss
+		$sql = "INSERT INTO usuarios(nome, email, senha, cpf, cidade, estado, telefone, curso,genero,data,pontuacao) VALUES ('$nome','$email','$senha','$cpf','$cidade','$estado','$telefone','$cursoInteresse','$genero','$data','0')";	//insere no banco de dadoss
 		
 
 		if (mysqli_query($connect, $sql)) {	//verifica se conectou

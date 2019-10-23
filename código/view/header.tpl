@@ -23,7 +23,7 @@
       </button>
 
 
-      <a class="navbar-brand" href="#"><img src="../imagens/logo.PNG" class="img-fluid"></a>
+      <a class="navbar-brand" href="inicial.php"><img src="../imagens/logo.PNG" class="img-fluid"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">

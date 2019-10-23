@@ -149,6 +149,10 @@
 
 	}
 
+	if (isset($_POST['mudarFoto'])) {
+		
+	}
+
 	dados($id,$connect);
 
 	

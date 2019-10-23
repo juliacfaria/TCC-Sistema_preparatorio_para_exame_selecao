@@ -159,9 +159,8 @@
 
 			                    <img src="../imagens/tetris.jpg" class="img-circle" style="width: 100px;" />
 
-			                    <a class="btn btn-info" href="#">
-			                        Mudar Foto</a>
-
+			                    <button class="btn btn-info" name="mudarFoto">Mudar Foto</button> 
+			                        
 
 			                </div>
 

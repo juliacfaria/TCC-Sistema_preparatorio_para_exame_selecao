@@ -157,7 +157,7 @@
 
 			                <label class="col-md-3 col-xs-12 control-label">Imagem da Questão (se houver):</label>
 			                <div class="col-md-9 col-xs-12">
-			                	<input type='file' name='foto'>	
+			                	<input type='file' name='foto1'>	
 
 			                </div>
 
