@@ -4,10 +4,10 @@
 	//require_once 'includs/footer.php';
 
     if(isset($_POST['exPositivo'])){
-        header("Location: questionario_1.php");
+        echo "<script>location.href='questionario_1.php';</script>";
     }
 
     if(isset($_POST['exNegativo'])){
-        header("Location: questionario_2.php");
+        echo "<script>location.href='questionario_2.php';</script>";
     }
 ?>
