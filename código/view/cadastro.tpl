@@ -34,7 +34,7 @@
         
                       </div>
         
-                      <div class="col-md-3 mb-3 form-group form-row">
+                      <div class="col-md-4 mb-3 form-group form-row">
           
                           <div class="form-group input-group col-md-4 mb-3">
                            <div class="input-group-prepend">
@@ -79,7 +79,7 @@
 
                       <div class="col-md-8 mb-3 form-group">
           
-                          <div class="form-group input-group col-md-6 mb-3">
+                          <div class="form-group input-group col-md-4 mb-3">
                            <div class="input-group-prepend">
                              <label class="input-group-text" for="inputGroupSelect02">Curso de interesse</label>
                            </div>
@@ -95,7 +95,7 @@
 
                       </div>
 
-                      <div class="col-md-4   mb-3 form-group">
+                      <div class="col-md-3   mb-3 form-group">
           
                           <div class="form-group input-group col-md-6 mb-3">
                            <div class="input-group-prepend">
@@ -109,8 +109,8 @@
 
                       </div>
 
-
-                    <div class="form-group">
+<hr>
+                    <div class="form-group col-md-4 mb-3">
                           <label for="exampleInputEmail1">Endereço de email</label>
                          
                           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email" name="email" required>
@@ -120,7 +120,7 @@
                       </div>
 
                       
-                      <div class="form-group">
+                      <div class="form-group col-md-4   mb-3">
                     
                           <label for="exampleInputPassword1">Senha</label>
                           
@@ -130,7 +130,7 @@
       
                   </div>
       
-                  <div class="form-group">
+                  <div class="form-group col-md-12   mb-3">
         
                      <!-- <div class="form-check">
          
@@ -149,7 +149,7 @@
                           </div>
         
                       </div>  -->
-                              <button type="submit" class="btn fundo3 btn-block text-white font-weight-bold" name="cadastrar">Cadastrar</button>
+                              <button type="submit" class="btn fundo3 btn-block text-white font-weight-bold " name="cadastrar">Cadastrar</button>
                   </div>
 
               </form>
