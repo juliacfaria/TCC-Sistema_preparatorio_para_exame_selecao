@@ -40,7 +40,7 @@
 						        
 						                
 						        <div>
-						                    <div class='panel panel-danger' id='d_questao_".$row['id']."' tempo='0'>
+						                    <div class='panel panel-danger' id='d_questao_".$row['idQuestoes']."' tempo='0'>
 						            
 						                <div class=''>
 						                
@@ -50,7 +50,7 @@
 						                                
 						                                <h3>
 						                                    
-						                                    Questão " .$row['id']."                               
+						                                    Questão " .$row['idQuestoes']."                               
 						                                </h3>
 						                                
 						                                   <span>
@@ -94,7 +94,7 @@
 						                                            
 						                                    <span>
 						                                                
-						                                            <input type='radio' class='icheckbox' name='resposta_".$row['id']."' value='1' onchange='responderMarcar('985215',this);'/>
+						                                            <input type='radio' class='icheckbox' name='resposta_".$row['idQuestoes']."' value='1' onchange='responderMarcar('985215',this);'/>
 						                 								a) ".$row['a']."&nbsp;   
 						                                    </span>
 						                                                
@@ -107,7 +107,7 @@
 						                                            
 						                                    <span >
 						                                                
-						                                            <input type='radio' class='icheckbox' name='resposta_".$row['id']."' value='2' onchange='responderMarcar('985215',this);'/>
+						                                            <input type='radio' class='icheckbox' name='resposta_".$row['idQuestoes']."' value='2' onchange='responderMarcar('985215',this);'/>
 						                                                b) ".$row['b']."&nbsp;          
 						                                    </span>
 						                                            
@@ -118,7 +118,7 @@
 						                                            
 						                                    <span>
 						                                                
-						                                            <input type='radio' class='icheckbox' name='resposta_".$row['id']."' value='3' onchange='responderMarcar('985215',this);'/>
+						                                            <input type='radio' class='icheckbox' name='resposta_".$row['idQuestoes']."' value='3' onchange='responderMarcar('985215',this);'/>
 						                                                c) ".$row['c']."&nbsp;       
 						                                    </span>
 						                               
@@ -129,7 +129,7 @@
 						                                            
 						                                    <span>
 						                                                
-						                                            <input type='radio' class='icheckbox' name='resposta_".$row['id']."' value='4' onchange='responderMarcar('985215',this);'>
+						                                            <input type='radio' class='icheckbox' name='resposta_".$row['idQuestoes']."' value='4' onchange='responderMarcar('985215',this);'>
 						                                                d) ".$row['d']."&nbsp;
 						                                                
 						                                    </span>
@@ -138,11 +138,11 @@
 						                                
 						                                <script>
 						                                	$('#myForm input').on('change', function() {
-															   alert($('input[name=resposta_".$row['id']."]:checked', '#myForm').val()); 
+															   alert($('input[name=resposta_".$row['idQuestoes']."]:checked', '#myForm').val()); 
 												     		});
 						                                </script>
 
-						                                <button type='button' class='btn fundo3 btn-lg push-up-10' onclick='responder(".$row['id'].")'>
+						                                <button type='button' class='btn fundo3 btn-lg push-up-10' onclick='responder(".$row['idQuestoes'].")'>
 						                                Responder</button>
 
 						                                <input type='text' id='p'>

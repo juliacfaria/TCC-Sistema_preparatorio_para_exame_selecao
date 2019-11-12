@@ -7,14 +7,13 @@
 	require_once 'includs/perfil.php';
 
 	$id = $_SESSION['id'];
-	
+
 	function dados($id,$connect){
-		$sql = "SELECT * from usuarios where id = '$id'";
+		$sql = "SELECT * from usuarios where idUsuarios = '$id'";
 		$res = mysqli_query($connect,$sql);
 		$res = mysqli_fetch_array($res);
 		$nome = $res['nome'];
 		$email = $res['email'];
-		$pontuacao = $res['pontuacao'];
 		$cpf = $res['cpf'];
 		$cidade = $res['cidade'];
 		$telefone = $res['telefone'];
@@ -23,7 +22,7 @@
 		$curso = $res['curso'];
 		$sexo = $res['genero'];
 
-
+        
 		echo "<script type='text/javascript'>	
 					document.getElementsByName( 'nome' )[0].value = '$nome';
 			</script>";
@@ -79,7 +78,7 @@
 	        $genero = $_POST['sexo'];
 	        $cpf = mysqli_escape_string($connect, $_POST['cpf']);
 
-	        $sql3 = "UPDATE usuarios SET nome = '$nome', email = '$email', cidade = '$cidade', estado = '$estado', telefone = $telefone, curso = '$cursoInteresse', data = '$data', genero = '$genero', cpf='$cpf' WHERE id='$id'";
+	        $sql3 = "UPDATE usuarios SET nome = '$nome', email = '$email', cidade = '$cidade', estado = '$estado', telefone = $telefone, curso = '$cursoInteresse', data = '$data', genero = '$genero', cpf='$cpf' WHERE idUsuarios='$id'";
 
 	        if (mysqli_query($connect, $sql3)) {	//verifica se conectou
 				$_SESSION['mensagem'] = "atualizado com sucesso";
@@ -93,7 +92,7 @@
 				$senha = mysqli_escape_string($connect, $_POST['senha']);
 				$senha = password_hash($senha, PASSWORD_DEFAULT);
 
-				$sql2 = "UPDATE usuarios SET senha='$senha' WHERE id='$id'";
+				$sql2 = "UPDATE usuarios SET senha='$senha' WHERE idUsuarios='$id'";
 
 		        if (mysqli_query($connect, $sql2)) {	//verifica se conectou
 					$_SESSION['mensagem'] = "senha atualizada com sucesso";

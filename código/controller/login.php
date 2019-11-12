@@ -37,7 +37,7 @@
 				if (password_verify($senha, $senhadb)) {
 					echo "ta verificado irmao";
 					$_SESSION['logado'] = true;	//salvando dados na session
-					$_SESSION['id'] = $dado['id'];
+					$_SESSION['id'] = $dado['idUsuarios'];
 					header('Location: principal.php');
 				}
 				/*
