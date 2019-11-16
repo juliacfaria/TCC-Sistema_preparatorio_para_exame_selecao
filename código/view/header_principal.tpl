@@ -41,7 +41,7 @@
         <li><a href="#"><span class="glyphicon glyphicon-signal">&ensp;</span>Desempenho</a></li>
         <li><a href="ranking.php"><span class="glyphicon glyphicon-list-alt">&ensp;</span>Ranking</a></li>
         <li><a href="conteudoProgramatico.php"><span class="glyphicon glyphicon-book">&ensp;</span>Conteúdo Programático</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-pushpin">&ensp;</span>Materiais Recomendados</a></li>
+        <li><a href="materiaisR.php"><span class="glyphicon glyphicon-pushpin">&ensp;</span>Materiais Recomendados</a></li>
         <li><a href="feedback.php"><span class="glyphicon glyphicon-comment">&ensp;</span>Feedback</a></li>
         <li><a href="plano.php"><span class="glyphicon glyphicon-calendar">&ensp;</span>Plano de Estudos</a></li>
       </ul>
