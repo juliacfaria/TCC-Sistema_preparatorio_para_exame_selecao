@@ -5,16 +5,18 @@
  * o código é aberto e o uso é free,
  * porém lembre-se de conceder os créditos ao desenvolvedor.
  */
-include 'conexao.php';
+session_start();
 
-$query_events = "SELECT id, title, color, start, end FROM eventos";
+include 'db_connect.php';
+$idUser = $_SESSION["id"];
+$query_events = "SELECT idEventos, title, color, start, end FROM eventos where usuarios_idUsuarios = $idUser";
 $resultado_events = $conn->prepare($query_events);
 $resultado_events->execute();
 
 $eventos = [];
 
 while($row_events = $resultado_events->fetch(PDO::FETCH_ASSOC)){
-    $id = $row_events['id'];
+    $id = $row_events['idEventos'];
     $title = $row_events['title'];
     $color = $row_events['color'];
     $start = $row_events['start'];

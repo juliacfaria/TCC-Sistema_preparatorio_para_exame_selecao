@@ -12,7 +12,7 @@ $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
 $data_end = str_replace('/', '-', $dados['end']);
 $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
 
-$query_event = "UPDATE eventos SET title=:title, color=:color, start=:start, end=:end WHERE id=:id";
+$query_event = "UPDATE events SET title=:title, color=:color, start=:start, end=:end WHERE id=:id";
 
 $update_event = $conn->prepare($query_event);
 $update_event->bindParam(':title', $dados['title']);

@@ -12,13 +12,15 @@ $data_start_conv = date("Y-m-d H:i:s", strtotime($data_start));
 $data_end = str_replace('/', '-', $dados['end']);
 $data_end_conv = date("Y-m-d H:i:s", strtotime($data_end));
 
-$query_event = "INSERT INTO eventos (title, color, start, end) VALUES (:title, :color, :start, :end)";
+$query_event = "INSERT INTO eventos (title, color, start, end, usuarios_idUsuarios) VALUES (:title, :color, :start, :end, :usuarios_idUsuarios)";
 
-$insert_event = $connect->prepare($query_event);
+$insert_event = $conn->prepare($query_event);
 $insert_event->bindParam(':title', $dados['title']);
 $insert_event->bindParam(':color', $dados['color']);
 $insert_event->bindParam(':start', $data_start_conv);
 $insert_event->bindParam(':end', $data_end_conv);
+$insert_event->bindParam(':usuarios_idUsuarios', $_SESSION["id"]);
+
 
 if ($insert_event->execute()) {
     $retorna = ['sit' => true, 'msg' => '<div class="alert alert-success" role="alert">Evento cadastrado com sucesso!</div>'];
