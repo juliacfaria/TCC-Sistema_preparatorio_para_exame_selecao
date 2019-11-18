@@ -40,7 +40,7 @@
 		//divide em array
 
 		echo "<div class='col-md-8 col-sm-8 col-xs-12'>
-						    	<form method='post' action='' id='myForm' onsubmit='myFunction($cont)'>
+						    	<form action='' onsubmit='myFunction($cont)'>
 						        ";
 
 
@@ -127,7 +127,7 @@
 									                                            
 									                                    <span >
 									                                                
-									                                            <input type='radio' class='icheckbox' name='r".$array[$verificador]."' value='b' onchange='responderMarcar('985215',this);'/>
+									                                            <input type='radio' class='icheckbox' name='".$array[$verificador]."' value='b' onchange='responderMarcar('985215',this);'/>
 									                                                b) ".$row['b']."&nbsp;          
 									                                    </span>
 									                                            
@@ -138,7 +138,7 @@
 									                                            
 									                                    <span>
 									                                                
-									                                            <input type='radio' class='icheckbox' name='r".$array[$verificador]."' value='c' onchange='responderMarcar('985215',this);'/>
+									                                            <input type='radio' class='icheckbox' name='".$array[$verificador]."' value='c' onchange='responderMarcar('985215',this);'/>
 									                                                c) ".$row['c']."&nbsp;       
 									                                    </span>
 									                               
@@ -149,7 +149,7 @@
 									                                            
 									                                    <span>
 									                                                
-									                                            <input type='radio' class='icheckbox' name='r".$array[$verificador]."' value='d' onchange='responderMarcar('985215',this);'>
+									                                            <input type='radio' class='icheckbox' name='".$array[$verificador]."' value='d' onchange='responderMarcar('985215',this);'>
 									                                                d) ".$row['d']."&nbsp;
 									                                                
 									                                    </span>
@@ -198,6 +198,7 @@
 
 								$test = 0;
 								if($verificador==5 or $verificador==$cont){
+
 									echo "</div>
 							                
 										</div>    
