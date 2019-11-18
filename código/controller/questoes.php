@@ -10,8 +10,36 @@
 
 	require_once 'questoes_view.php';
 
+	
 	echo "<script>
-					function responder(id){
+					myFunction(cont){
+						var j = 1;
+						while(j<cont){
+							if (cont>5){
+								break;
+							}
+							var radios = document.getElementsByName('j');
+			                alert('Quantidade de itens do radio button: ' + radios.length);
+			                for (var i = 0; i < radios.length; i++) {
+			                    if (radios[i].checked) {
+			                        alert('Escolheu: ' + radios[i].value);
+			                    }
+			                }
+			                j++;
+						}
+						
+					}
+
+		  </script>";
+
+	//document.getElementById('p').value = document.getElementById('resp').value;
+	//var e = document.getElementById('');
+	//var itemSelecionado = e.options[e.selectedIndex].text;
+
+	//função em javascript
+
+
+	/*function responder(id){
 					    alert(id);
 
 						$('#myForm input').on('change', function() {
@@ -26,15 +54,4 @@
 
 
 			     		
-				   	};
-
-				</script>";
-
-	//document.getElementById('p').value = document.getElementById('resp').value;
-	//var e = document.getElementById('');
-	//var itemSelecionado = e.options[e.selectedIndex].text;
-
-	//função em javascript
-
-
-	
+				   		};*/

@@ -11,7 +11,31 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   
-  
+  <script>
+          myFunction(cont){
+            $array = array(1=>"um",2=>"dois",3=>"tres",4=>"quatro",5=>"cinco");
+            var j = 1;
+            alert("oi");
+            while(j<cont){
+              if (j>5){
+                break;
+              }
+              alert(j);
+              var radios = document.getElementsByName($array[j]);
+              alert('Quantidade de itens do radio button: ' + radios.length);
+              
+              for (var i = 0; i < radios.length; i++) {
+                 if (radios[i].checked) {
+                    alert('Escolheu: ' + radios[i].value);
+                  }
+              }
+              j++;
+            }
+            
+
+          }
+
+    </script>
 </head>
 <body>
 
