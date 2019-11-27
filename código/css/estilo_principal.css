@@ -4,6 +4,11 @@
       background-color: #570600;    
     }
 
+    input[type=radio]:checked{
+    color: red;
+    font-weight: bold;
+}
+
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 450px}
     

@@ -8,43 +8,19 @@
 
 	//sql para realizar o select
 	$sql = "SELECT * FROM questoes";
-	$sql2 = "SELECT * FROM questoes";
-
-	//variavel para identificar se a consulta da sql teve resultados
-	$sim = 0;
-
-	//consulta sql
-	$res = mysqli_query($connect,$sql);
-	$res2 = mysqli_query($connect,$sql2);
-
-	$cont = 0;
-
-
-	//contando a qtd de elementos do array
-	if (mysqli_num_rows($res2)>0){
-		while($ro = mysqli_fetch_array($res2)){
-			if ($ro['materia']==$materia and $ro['ano']==$ano){
-				$cont++;
-			}
-			
-		}
-	}
-
-	$array = array(1=>"um",2=>"dois",3=>"tres",4=>"quatro",5=>"cinco");
 	
-
-	//adicionando o conteúdo das questões
-	$verificador = 1;
-	echo "VALOR:".$array[$verificador];
+	$sim = 0;
+	$res = mysqli_query($connect,$sql);
+	echo "";
+	//echo "VALOR:".$array[$verificador];
 	if (mysqli_num_rows($res)>0){
 		//divide em array
 
-		echo "<div class='col-md-8 col-sm-8 col-xs-12'>
-						    	<form action='' onsubmit='myFunction($cont)'>
+		echo "
+						    	
 						        ";
 
 
-		echo "CONT: $cont";
 		while($row = mysqli_fetch_array($res)){
 			//verifica se há questões do modelo especificado pelo estudante na hora de filtrar
 
@@ -54,14 +30,12 @@
 					//indica que a consulta sql retornou valores
 					$sim = 1;
 
-					if($verificador<=5){
 					//incrementação em html dos conteúdos das questões
-							echo "
-						                
-						        <div>
-						            <div class='panel panel-danger' id='d_questao_".$row['idQuestoes']."' tempo='0'>
+							echo "<form action='questoes.php' method='post''>
+									<div class = 'container'>
+						            <div class='panel panel-danger' tempo='0'>
 						            
-						                <div class=''>
+						                <div>
 						                
 									                    <div class='panel-heading'>
 									                                                    
@@ -106,15 +80,15 @@
 									                    
 									                    </div>
 						                    
-									                    <div class='panel-body'>
+									                    <div class='panel-body '>
 									                        
-									                        <div class='form form-group'>
+									                        <div class='form form-group '>
 
 									                                <label class='check btn-block letra ' onclick=''>
 									                                            
-									                                    <span>
+									                                    <span class='' >
 									                                                
-									                                            <input type='radio' class='icheckbox' name='".$array[$verificador]."' value='a' onchange='responderMarcar('985215',this);'/>
+									                                            <input type='radio' class='icheckbox ' name='id' value='a' onchange='responderMarcar('985215',this);'/>
 									                 								a) ".$row['a']."&nbsp;   
 									                                    </span>
 									                                                
@@ -127,7 +101,7 @@
 									                                            
 									                                    <span >
 									                                                
-									                                            <input type='radio' class='icheckbox' name='".$array[$verificador]."' value='b' onchange='responderMarcar('985215',this);'/>
+									                                            <input type='radio' class='icheckbox' name='id' value='b' onchange='responderMarcar('985215',this);'/>
 									                                                b) ".$row['b']."&nbsp;          
 									                                    </span>
 									                                            
@@ -138,7 +112,7 @@
 									                                            
 									                                    <span>
 									                                                
-									                                            <input type='radio' class='icheckbox' name='".$array[$verificador]."' value='c' onchange='responderMarcar('985215',this);'/>
+									                                            <input type='radio' class='icheckbox' name='id' value='c' onchange='responderMarcar('985215',this);'/>
 									                                                c) ".$row['c']."&nbsp;       
 									                                    </span>
 									                               
@@ -149,7 +123,7 @@
 									                                            
 									                                    <span>
 									                                                
-									                                            <input type='radio' class='icheckbox' name='".$array[$verificador]."' value='d' onchange='responderMarcar('985215',this);'>
+									                                            <input type='radio' class='icheckbox' name='id' value='d' onchange='responderMarcar('985215',this);'>
 									                                                d) ".$row['d']."&nbsp;
 									                                                
 									                                    </span>
@@ -157,12 +131,11 @@
 									                                </label>
 									                                
 
-									                                <!--<button type='button' class='btn fundo3 btn-lg push-up-10' onclick='responder(".$row['idQuestoes'].")'>
-									                                Responder</button>-->
+									                                <input type='submit' class='btn fundo3 btn-lg push-up-10' name='resp' value='Responder' onclick='mudarCor(".$row['correta'].")'>
 
-									                                <input type='hidden' id='resp' value='".$row['correta']."'>";
+									                                <input type='hidden' name='correta' value='".$row['correta']."'>";
 
-									                                $_SESSION["$array[$verificador]"]= $row['correta'];
+									                                $_SESSION["'id_".$row['idQuestoes'].""]= $row['correta'];
 									                          echo "                                  
 									                        </div>
 									                                                    
@@ -192,23 +165,21 @@
 								                    
 								                </div>
 								            
-								         </div>
-
-								</div>";
-
-								$test = 0;
-								if($verificador==5 or $verificador==$cont){
+								         </div>";
 
 									echo "</div>
 							                
-										</div>    
-											<input type='submit' class='btn fundo3 btn-lg push-up-10' value='Responder'>
-										 </form>";
+										</div>";  
+
+											//<input type='submit' class='btn fundo3 btn-lg push-up-10 data-toggle='modal' data-target='#exampleModal' value='Responder' name='resp'>
+										echo " </div></form>";
+
+
+										 //O FORM FICA DENTRO OU FORA???????
 
 									echo "
 									</div>";
-									$test = 1;
-								}
+								
 
 								/*if($test == 1){
 									$variavel = 0;
@@ -224,18 +195,25 @@
 									}
 
 								}*/
-				          
-						   $verificador++;
-
-
-
-						}
-
-				
-
-				
+				         
 			    
 			 }       
+		}
+
+		if(isset($_POST['resp'])){
+			echo "entrou";
+			$id = $_POST['id'];
+			$certa = $_POST['correta'];
+			if($id==$certa){
+				echo "acertou";
+				echo "<script>
+					</script>
+				";
+
+			}else{
+				echo "errou";
+			}
+
 		}
 
 		//ou seja, caso não tenha nenhuma questão

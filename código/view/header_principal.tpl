@@ -20,17 +20,49 @@
                   break;
                 }
                 var radios = document.getElementsByName(questao[j]);
-
+                var list = [];
                 //alert('Quantidade de itens do radio button 1: ' + radios.length);
                 
                 for (var i = 0; i < radios.length; i++) {
-                   if (radios[i].checked) {
+                   if (radios[i].checked) { 
+                      list[i]=radios[i].value;                      
                       alert('Escolheu: ' + radios[i].value);
+                      
+                      // return document.getElementByName.style.color = 'red';
+                      //radios[i].style.color = "red"
                     }
                  }
                 j++;
               }
-      }
+              funcao2(list);
+
+          }
+
+          function mudarCor(correta){
+              
+                var radios = document.getElementsByName('id');
+                //alert('Quantidade de itens do radio button 1: ' + radios.length);
+                
+                for (var i = 0; i < radios.length; i++) {
+                   if (radios[i]==correta) { 
+                      
+                      
+                      return document.getElementByName.style.color = 'red';
+                        //radios[i].style.color = "red"
+                    }
+                 }
+                j++;
+              }
+              funcao2(list);
+
+          }
+
+          function funcao2(list){
+            alert("LISTA");
+            for (i = 0; i < list.length; i++) {
+                alert(list[i]);
+            }
+          }
 
     </script>
 </head>
