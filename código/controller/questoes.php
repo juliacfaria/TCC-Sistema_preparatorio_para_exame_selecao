@@ -10,9 +10,9 @@
 
 	require_once 'questoes_view.php';
 
-	if(isset($_POST['resp'])){
+	/*if(isset($_POST['resp'])){
 		$array = array(1=>"um",2=>"dois",3=>"tres",4=>"quatro",5=>"cinco");
-		echo "<br><b>GABARITO<b><br>";
+		//echo "<br><b>GABARITO<b><br>";
 		$ui = 1;
 		while($ui<=$_SESSION['cont'] and $ui<=5){
 			echo "resposta $ui:".$_SESSION[$array[$ui]];
@@ -40,7 +40,7 @@
 			  </div>
 			</div>";
 	}
-
+*/
 
 	
 	/*echo "<script>

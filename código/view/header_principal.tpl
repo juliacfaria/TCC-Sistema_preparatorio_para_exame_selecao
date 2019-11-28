@@ -11,7 +11,70 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   
+
+    <script type="text/javascript">
+              /*window.onload = function(){
+                  alert("f");
+              }*/
+
+              function bini(idQ,texto) {
+                document.getElementById(idQ).innerHTML = texto;
+                //alert("oi");
+              }
+
+              function bini2(correta) {
+                //alert(correta.innerHTML);
+                //document.getElementById(correta).innerHTML = "bininho";
+                /*var x = document.getElementById(correta).value;
+                alert(x);*/
+                //correta.value="texto";
+                //correta.innerHTML = "te amo";
+                correta.style = "color:green;display:inline;";
+              }
+
+              function bini3(correta,errada) {
+                //alert(correta.innerHTML);
+                //document.getElementById(correta).innerHTML = "bininho";
+                /*var x = document.getElementById(correta).value;
+                alert(x);*/
+                //correta.value="texto";
+
+                //mudando texto
+                //correta.innerHTML = "te amo";
+                //alert(correta.innerHTML);
+                errada.style = "color:red;display:inline;";
+                correta.style = "color:green;display:inline;";
+              }
+    </script>
+
+
+
+
+
     <script>
+          
+
+          
+
+          function mudarCor(id, correta){
+              
+                var radios = document.getElementsByName('id');
+                //alert('Quantidade de itens do radio button 1: ' + radios.length);
+                
+                for (var i = 0; i < radios.length; i++) {
+                   if (radios[i]==correta) { 
+                      
+                      
+                      return document.getElementByName.style.color = 'red';
+                        //radios[i].style.color = "red"
+                    }
+                 }
+                j++;
+              }
+              
+
+          }
+
           function myFunction(cont){
               var questao = ['', 'um', 'dois', 'tres','quatro','cinco']; 
               var j = 1;
@@ -30,25 +93,6 @@
                       
                       // return document.getElementByName.style.color = 'red';
                       //radios[i].style.color = "red"
-                    }
-                 }
-                j++;
-              }
-              funcao2(list);
-
-          }
-
-          function mudarCor(correta){
-              
-                var radios = document.getElementsByName('id');
-                //alert('Quantidade de itens do radio button 1: ' + radios.length);
-                
-                for (var i = 0; i < radios.length; i++) {
-                   if (radios[i]==correta) { 
-                      
-                      
-                      return document.getElementByName.style.color = 'red';
-                        //radios[i].style.color = "red"
                     }
                  }
                 j++;

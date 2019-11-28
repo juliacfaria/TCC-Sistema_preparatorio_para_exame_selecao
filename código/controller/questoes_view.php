@@ -31,7 +31,7 @@
 					$sim = 1;
 
 					//incrementação em html dos conteúdos das questões
-							echo "<form action='questoes.php' method='post''>
+							echo "<form action='questoes.php' method='post'>
 									<div class = 'container'>
 						            <div class='panel panel-danger' tempo='0'>
 						            
@@ -79,17 +79,17 @@
 									                        </div>
 									                    
 									                    </div>
-						                    
+						                    			<h3 id=".$row['idQuestoes']." style='padding-left: 0.6em;'></h3>
 									                    <div class='panel-body '>
 									                        
 									                        <div class='form form-group '>
 
-									                                <label class='check btn-block letra ' onclick=''>
+									                                <label class='check btn-block letra '>
 									                                            
 									                                    <span class='' >
 									                                                
-									                                            <input type='radio' class='icheckbox ' name='id' value='a' onchange='responderMarcar('985215',this);'/>
-									                 								a) ".$row['a']."&nbsp;   
+									                                            <input type='radio' class='icheckbox ' name='id'  value='a'>
+									                 								<p id='id_".$row['idQuestoes']."a' style='display:inline;''>a) ".$row['a']."&nbsp;  </p>
 									                                    </span>
 									                                                
 									                                                                                
@@ -97,43 +97,46 @@
 									                                            
 									                                </label>
 									                                                                                
-									                                <label class='check btn-block letra' onclick=''>
+									                                <label class='check btn-block letra' >
 									                                            
 									                                    <span >
 									                                                
-									                                            <input type='radio' class='icheckbox' name='id' value='b' onchange='responderMarcar('985215',this);'/>
-									                                                b) ".$row['b']."&nbsp;          
+									                                            <input type='radio' class='icheckbox' name='id' value='b'>
+									                                                <p id='id_".$row['idQuestoes']."b' style='display:inline;''>b) ".$row['b']."&nbsp;  </p>         
 									                                    </span>
 									                                            
 									                                </label>
 									                                                                                
 
-									                                <label class='check btn-block letra' onclick=''>
+									                                <label class='check btn-block letra' >
 									                                            
 									                                    <span>
 									                                                
-									                                            <input type='radio' class='icheckbox' name='id' value='c' onchange='responderMarcar('985215',this);'/>
-									                                                c) ".$row['c']."&nbsp;       
+									                                            <input type='radio' class='icheckbox' name='id'  value='c' />
+
+									                                                <p id='id_".$row['idQuestoes']."c' style='display:inline;''>c) ".$row['c']."&nbsp;  </p>      
 									                                    </span>
 									                               
 									                                </label>
 									                                                                                
 
-									                                <label class='check btn-block letra' onclick=''>
+									                                <label class='check btn-block letra' >
 									                                            
 									                                    <span>
 									                                                
-									                                            <input type='radio' class='icheckbox' name='id' value='d' onchange='responderMarcar('985215',this);'>
-									                                                d) ".$row['d']."&nbsp;
+									                                            <input type='radio' class='icheckbox' name='id' value='d' >
+									                                                <p id='id_".$row['idQuestoes']."d' style='display:inline;''>d) ".$row['d']."&nbsp;  </p>
 									                                                
 									                                    </span>
 									                                           
 									                                </label>
 									                                
 
-									                                <input type='submit' class='btn fundo3 btn-lg push-up-10' name='resp' value='Responder' onclick='mudarCor(".$row['correta'].")'>
+									                                <input type='submit' class='btn fundo3 btn-lg push-up-10' name='resp' value='Responder' >
 
-									                                <input type='hidden' name='correta' value='".$row['correta']."'>";
+									                                <input type='hidden' name='correta' value='".$row['correta']."'>
+
+									                                <input type='hidden' name='idQuestoes' value='".$row['idQuestoes']."'>";
 
 									                                $_SESSION["'id_".$row['idQuestoes'].""]= $row['correta'];
 									                          echo "                                  
@@ -200,18 +203,44 @@
 			 }       
 		}
 
+		
+
 		if(isset($_POST['resp'])){
-			echo "entrou";
+			//echo "entrou";
 			$id = $_POST['id'];
+			//echo "$id";
 			$certa = $_POST['correta'];
+			$idQuestoes = $_POST['idQuestoes'];
+			//echo "$idQuestoes";
+
+			$correta = "id_".$idQuestoes."".$certa;
+			$falsa = "id_".$idQuestoes."".$id;
+
+			//echo "$correta<br>";
+			//echo "$falsa";
 			if($id==$certa){
-				echo "acertou";
+				//echo "acertou";
 				echo "<script>
+						bini($idQuestoes,'Acertou');
+					</script>
+				";
+
+				echo "<script>
+						bini2($correta);
 					</script>
 				";
 
 			}else{
-				echo "errou";
+				//echo "errou";
+				echo "<script>
+						bini($idQuestoes,'Errou');
+					</script>
+				";
+
+				echo "<script>
+						bini3($correta,$falsa);
+					</script>
+				";
 			}
 
 		}
