@@ -201,6 +201,7 @@
 				         
 			    
 			 }       
+<<<<<<< HEAD
 		}
 
 		
@@ -297,6 +298,50 @@
 				}
 
 
+				echo "<script>
+						bini($idQuestoes,'Errou');
+					</script>
+				";
+
+				echo "<script>
+						bini3($correta,$falsa);
+					</script>
+				";
+			}
+
+=======
+>>>>>>> b790c42288c1eb63943d38edae95f1b3bf098472
+		}
+
+		
+
+		if(isset($_POST['resp'])){
+			//echo "entrou";
+			$id = $_POST['id'];
+			//echo "$id";
+			$certa = $_POST['correta'];
+			$idQuestoes = $_POST['idQuestoes'];
+			//echo "$idQuestoes";
+
+			$correta = "id_".$idQuestoes."".$certa;
+			$falsa = "id_".$idQuestoes."".$id;
+
+			//echo "$correta<br>";
+			//echo "$falsa";
+			if($id==$certa){
+				//echo "acertou";
+				echo "<script>
+						bini($idQuestoes,'Acertou');
+					</script>
+				";
+
+				echo "<script>
+						bini2($correta);
+					</script>
+				";
+
+			}else{
+				//echo "errou";
 				echo "<script>
 						bini($idQuestoes,'Errou');
 					</script>
