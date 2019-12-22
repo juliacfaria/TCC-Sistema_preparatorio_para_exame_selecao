@@ -4,10 +4,9 @@
 
 	//variaveis selecionadas para filtro
 	$ano = $_SESSION['ano'];
-	$materia = $_SESSION['materia'];
 
 	//sql para realizar o select
-	$sql = "SELECT * FROM questoes";
+	$sql = "SELECT * FROM questoes where ano='$ano'";
 	
 	$sim = 0;
 	$res = mysqli_query($connect,$sql);
@@ -16,23 +15,18 @@
 	if (mysqli_num_rows($res)>0){
 		//divide em array
 
-		echo "
-						    	
-						        ";
-
 
 		while($row = mysqli_fetch_array($res)){
 			//verifica se há questões do modelo especificado pelo estudante na hora de filtrar
 
 			
-
-			if ($row['materia']==$materia and $row['ano']==$ano){
 					//indica que a consulta sql retornou valores
 					$sim = 1;
 
 					//incrementação em html dos conteúdos das questões
-							echo "<form action='questoes.php' method='post'>
+							echo "<form action='simulado.php' method='post'>
 									<div class = 'container'>
+									<h3>Simulado</h3>
 						            <div class='panel panel-danger' tempo='0'>
 						            
 						                <div>
@@ -178,7 +172,6 @@
 										echo " </div></form>";
 
 
-										 //O FORM FICA DENTRO OU FORA???????
 
 									echo "
 									</div>";
@@ -200,7 +193,7 @@
 								}*/
 				         
 			    
-			 }       
+			     
 		}
 
 		
@@ -220,7 +213,7 @@
 			//echo "$falsa";
 			if($id==$certa){
 				//echo "acertou";
-
+/*
 				if($materia == "Física" || $materia == "Biologia" || $materia == "Química"){
 					$sql = "UPDATE `desempenho` SET `certasTotal`= certasTotal+1, certasCien = certasCien+1 WHERE usuarios_idUsuarios =".$_SESSION['id'];
 
@@ -250,7 +243,7 @@
 
 					mysqli_query($connect,$sql);
 
-				}
+				}*/
 
 				echo "<script>
 						bini($idQuestoes,'Acertou');
@@ -264,7 +257,7 @@
 
 			}else{
 				//echo "errou";
-
+/*
 				if($materia == "Física" || $materia == "Biologia" || $materia == "Química"){
 					$sql = "UPDATE `desempenho` SET `erradasTotal`= erradasTotal+1, erradasCien =erradasCien+1 WHERE usuarios_idUsuarios =".$_SESSION['id'];
 
@@ -295,7 +288,7 @@
 					mysqli_query($connect,$sql);
 
 				}
-
+*/
 
 				echo "<script>
 						bini($idQuestoes,'Errou');

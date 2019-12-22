@@ -1,29 +1,42 @@
-<header>
-    <title>Solicitar nova senha | Pré-Cedaf</title>
-</header>
 <div class="container-fluid text-center">    
 
+  <div>
 
-  <div class="row content">
     <div class="col-sm-4 ">
     </div>
 
     <div class="col-sm-4 text-left"> 
-      <form class="form-container col-6 col-sm-4 col-md-2" method="post" action="esqueceuSenha.php">
-          <div class="form-group">
-                <h3><strong>Esqueceu sua senha?</strong></h3>
-                <h6>Informe o email que você utiliza para acessar o Pré-Cedaf e enviaremos as instruções para a troca.</h6>
-          </div>
-          <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu email" name="email">
-          </div>
-          <div class="form-group">
-                <button type="submit" class="btn fundo3 btn-block text-white font-weight-bold" name="enviar">Enviar email</button>
-         </div>
-    
+      <br>
+
+      <form class="panel panel-default" method="post" action="esqueceuSenha.php">
+               <h3 class="text-center">Esqueceu sua senha?</h3>
+           
+               <div class="panel-body">
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Informe o email que você utiliza para acessar o Pré-Cedaf e enviaremos as instruções para a troca.</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email" name="email">
+                    <small id="emailHelp" class="form-text text-muted">O email não será compartilhado com ninguém.</small>
+                  </div>
+                    
+                  
+                  <div class="form-group">
+                     <label for="password">
+                           Ainda não tem um cadastro? Cadastre-se <a class="label-link" href="cadastro.php">aqui</a> <br>
+                     </label>
+                  </div>
+
+                  <button type="submit" class="btn fundo3 btn-block text-white font-weight-bold" name="recuperar">Enviar email</button>
+
+              </div> 
       </form>
+
     </div>
-    
-  <div class="col-sm-4 ">
+
+    <div class="col-sm-4 ">
+    </div>
+
   </div>
 </div>
+
+

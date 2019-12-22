@@ -3,15 +3,18 @@
 
 	require_once 'db_connect.php';
 
-	require_once 'includs/header_principal.php';
-	require_once 'includs/perfil.php';
+	require_once '../view/header_principal.tpl';
+	require_once '../view/perfil.tpl';
 
 	$id = $_SESSION['id'];
 
 	function dados($id,$connect){
 		$sql = "SELECT * from usuarios where idUsuarios = '$id'";
+        $sql1 = "SELECT certasTotal from desempenho where usuarios_idUsuarios = '$id'";
 		$res = mysqli_query($connect,$sql);
+        $res1 = mysqli_query($connect,$sql1);
 		$res = mysqli_fetch_array($res);
+        $res1 = mysqli_fetch_array($res1);
 		$nome = $res['nome'];
 		$email = $res['email'];
 		$cpf = $res['cpf'];
@@ -21,6 +24,7 @@
 		$data = $res['data'];
 		$curso = $res['curso'];
 		$sexo = $res['genero'];
+        $pontuacao = $res1['certasTotal'];
 
         
 		echo "<script type='text/javascript'>	

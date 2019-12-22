@@ -2,18 +2,23 @@
   
 <div class="container-fluid text-center">    
 
+  <div>
 
-  <div class="row content">
     <div class="col-sm-4 ">
     </div>
 
     <div class="col-sm-4 text-left"> 
-      <form class="form-container col-6 col-sm-4 col-md-2" method="post" action="login.php">
-                    
+      <br>
+
+      <form class="panel panel-default" method="post" action="login.php">
+               <h3 class="text-center">Login</h3>
+           
+               <div class="panel-body">
+
                   <div class="form-group">
                     <label for="exampleInputEmail1">Endereço de email:</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email" name="email">
-                    <small id="emailHelp" class="form-text text-muted">O email não será compartilhado com mais ninguém.</small>
+                    <small id="emailHelp" class="form-text text-muted">O email não será compartilhado com ninguém.</small>
                   </div>
                     
                   <div class="form-group">
@@ -32,13 +37,22 @@
                     </label>
                   </div>
 
+                  <div class="form-group">
+                     <label for="password">
+                           Ainda não tem um cadastro? Cadastre-se <a class="label-link" href="cadastro.php">aqui</a> <br>
+                     </label>
+                  </div>
+
                   <button type="submit" class="btn fundo3 btn-block text-white font-weight-bold" name="entrar">Entrar</button>
-                    
+
+              </div> 
       </form>
+
     </div>
 
     <div class="col-sm-4 ">
     </div>
+
   </div>
 </div>
 

@@ -1,19 +1,16 @@
 <?php
 	//conectando
-	require_once 'db_connect.php';	//não precisa copiar o código todo e colar aqui. Basta usar o "require_once"
+	require_once 'db_connect.php';	
+
+	//view
+	require_once '../view/header.tpl';
+	require_once '../view/cadastro.tpl';
 
 
-	//sessoes
-	session_start();
-
-
-	require_once "includs/header.php";
-
-	require_once "includs/cadastro.php";
-	
 
 	//verificando se o botão foi clicado
 	if (isset($_POST['cadastrar'])) {
+
         $nome = mysqli_escape_string($connect, $_POST['nome']);
         $senha = mysqli_escape_string($connect, $_POST['senha']);
 		$senha = password_hash($senha, PASSWORD_DEFAULT);
@@ -21,26 +18,34 @@
 		$cidade = mysqli_escape_string($connect, $_POST['cidade']);
         $estado = $_POST['estado'];
         $telefone = mysqli_escape_string($connect, $_POST['telefone']);
-        $cursoInteresse = $_POST['curso'];
+        $curso_interesse = $_POST['curso'];
         $data = $_POST['data'];
         $genero = $_POST['genero'];
         $cpf = mysqli_escape_string($connect, $_POST['cpf']);
 
-		$sql = "INSERT INTO usuarios(nome, email, senha, cpf, cidade, estado, telefone, curso,genero,data,moderador) VALUES ('$nome','$email','$senha','$cpf','$cidade','$estado','$telefone','$cursoInteresse','$genero','$data','0')";	//insere no banco de dadoss
-		
+
+		$sql = "INSERT INTO usuarios(nome, email, senha, cpf, cidade, estado, telefone, curso,genero,data,moderador) VALUES ('$nome','$email','$senha','$cpf','$cidade','$estado','$telefone','$curso_interesse','$genero','$data','0')";	
+
 
 		if (mysqli_query($connect, $sql)) {	//verifica se conectou
-			$_SESSION['mensagem'] = "cadastrado com sucesso";
+			
+			$sql2 = "SELECT idUsuarios from usuarios where email = '$email'";
+
+			if ($res = mysqli_query($connect, $sql2)) { //etapa para inicializar a pontuação
+				$row = mysqli_fetch_array($res);
+				$id = $row['idUsuarios'];
+
+				$sql3 = "INSERT INTO `desempenho`(`certasTotal`, `erradasTotal`, `certasMat`, `erradasMat`, `certasPort`, `erradasPort`, `certasCien`, `erradasCien`, `certasGeo`, `erradasGeo`, `certasHist`, `erradasHist`, `usuarios_idUsuarios`) VALUES (0,0,0,0,0,0,0,0,0,0,0,0,'$id')";	//insere no banco de dadoss
+
+				if(mysqli_query($connect, $sql3)){
+					echo "inseriu";
+				}
+
+			}			
 			echo "<script>location.href='login.php';</script>";
-			//header('Location: login.php');
+		
 		}else{
-			$_SESSION['mensagem'] = "erro ao cadastrar";
 			echo "<script>location.href='cadastro.php';</script>";
-            //header('Location: ../controller/principal.php');
-			//header("Location: ../index.php");
 		}
 
-		mysqli_close($connect);
     }
-
-    require_once "includs/footer.php";

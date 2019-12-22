@@ -21,7 +21,7 @@
 			                    <label class="col-md-3 col-xs-12 control-label">Enunciado 1: </label>
 
 			                    <div class="col-md-9 col-xs-12">
-			                            <input class="form-control" type="text" name="enunciado1" size="40" required/>
+			                            <input class="form-control" type="text" name="enunciado1" size="450" required/>
 			                    </div>
 			                    <br>
 			                    <br>
@@ -54,7 +54,7 @@
 			                    <label class="col-md-3 col-xs-12 control-label">Alternativa A:</label>
 
 			                    <div class="col-md-9 col-xs-12s">
-			                        <input class="form-control" type="text" name="a" size="10" maxlength="20" required />
+			                        <input class="form-control" type="text" name="a" size="10" maxlength="200" required />
  
 			                    </div>
 			                    <br>
@@ -65,7 +65,7 @@
 			                    <label class="col-md-3 col-xs-12 control-label">Alternativa B:</label>
 
 			                    <div class="col-md-9 col-xs-12s">
-			                        <input class="form-control" type="text" name="b" size="10" maxlength="20" required/>
+			                        <input class="form-control" type="text" name="b" size="10" maxlength="200" required/>
  
 			                    </div>
 			                    <br>
@@ -76,7 +76,7 @@
 			                    <label class="col-md-3 col-xs-12 control-label">Alternativa C:</label>
 
 			                    <div class="col-md-9 col-xs-12s">
-			                        <input class="form-control" type="text" name="c" size="10" maxlength="20" required/>
+			                        <input class="form-control" type="text" name="c" size="10" maxlength="200" required/>
  
 			                    </div>
 			                    <br>
@@ -87,7 +87,7 @@
 			                    <label class="col-md-3 col-xs-12 control-label">Alternativa D:</label>
 
 			                    <div class="col-md-9 col-xs-12s">
-			                        <input class="form-control" type="text" name="d" size="10" maxlength="20" required/>
+			                        <input class="form-control" type="text" name="d" size="10" maxlength="200" required/>
  
 			                    </div>
 			                    <br>

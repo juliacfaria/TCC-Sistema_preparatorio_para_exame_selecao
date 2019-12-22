@@ -3,8 +3,8 @@
 
 	require_once 'db_connect.php';
 
-	require_once 'includs/header_principal.php';
-	require_once 'includs/filtrarQuestoes.php';
+	require_once '../view/header_principal.tpl';
+	require_once '../view/filtrarQuestoes.tpl';
 
 	if (isset($_POST['filtrarQuestoes'])) {
         $ano = $_POST['ano'];

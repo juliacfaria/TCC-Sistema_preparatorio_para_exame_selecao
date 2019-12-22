@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once 'includs/header_plano.php';
+    require_once '../view/header_plano.tpl';
 
 ?>
 <!--**
@@ -159,6 +159,3 @@
                 </div>
             </div>
         </div>
-<?php
-      require_once 'includs/footer.php';
-?>

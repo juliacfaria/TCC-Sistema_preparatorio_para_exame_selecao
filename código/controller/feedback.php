@@ -1,13 +1,44 @@
 <?php
-	require_once 'includs/header_principal.php';
-	require_once 'includs/feedback.php';
-	//require_once 'includs/footer.php';
+	session_start();
 
-    if(isset($_POST['exPositivo'])){
-        echo "<script>location.href='questionario_1.php';</script>";
-    }
+	require_once 'db_connect.php';
 
-    if(isset($_POST['exNegativo'])){
-        echo "<script>location.href='questionario_2.php';</script>";
-    }
+	require_once '../view/header_principal.tpl';
+	require_once '../view/feedback.tpl';
+
+	$sql = "SELECT *  FROM questionario_has_usuario WHERE idUsuarios = ".$_SESSION['id'];
+
+	$res = mysqli_query($connect,$sql);
+	if(mysqli_num_rows($res) == 0){ 
+
+	    if(isset($_POST['jaRealizouExame'])){
+
+	        echo "<script>location.href='questionario1.php';</script>";
+	    }
+
+	    if(isset($_POST['naoRealizouExame'])){
+	        echo "<script>location.href='questionario2.php';</script>";
+	    }
+
+	}else{
+		$ja_respondeu_1 = 0;
+		$ja_respondeu_2 = 0;
+		while ($row = mysqli_fetch_array($res)) {
+			if($row['idQuestionarios']==1 and isset($_POST['jaRealizouExame'])){
+				echo "Você não pode fazer o questionario de resolução da prova pois ele ja foi realizado por você antes";
+				$ja_respondeu_1 = 1;
+			}else if ($row['idQuestionarios']==2 and isset($_POST['naoRealizouExame'])){
+				echo "Você não pode fazer o questionario de antes de resovler a prova pois ele ja foi realizado por você antes";
+				$ja_respondeu_2 = 1;
+			}
+		}
+
+		if ($ja_respondeu_1 == 0 and isset($_POST['jaRealizouExame'])) {
+			echo "<script>location.href='questionario1.php';</script>";
+		}
+
+		if ($ja_respondeu_2 == 0 and isset($_POST['naoRealizouExame'])) {
+			echo "<script>location.href='questionario2.php';</script>";
+		}
+	}
 ?>
