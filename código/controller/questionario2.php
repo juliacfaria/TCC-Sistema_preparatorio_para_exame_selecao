@@ -21,5 +21,5 @@
 	    	echo "erro";
 	    }
 
-	   // echo "<script>location.href='feedback.php';</script>";
+	    echo "<script>location.href='feedback.php';</script>";
 	}

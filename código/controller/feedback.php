@@ -9,6 +9,7 @@
 	$sql = "SELECT *  FROM questionario_has_usuario WHERE idUsuarios = ".$_SESSION['id'];
 
 	$res = mysqli_query($connect,$sql);
+
 	if(mysqli_num_rows($res) == 0){ 
 
 	    if(isset($_POST['jaRealizouExame'])){
@@ -21,8 +22,10 @@
 	    }
 
 	}else{
+		// verifica se o usuario já respondeu o questionario que ele selecionou e retorna isso para o usuário
 		$ja_respondeu_1 = 0;
 		$ja_respondeu_2 = 0;
+
 		while ($row = mysqli_fetch_array($res)) {
 			if($row['idQuestionarios']==1 and isset($_POST['jaRealizouExame'])){
 				echo "Você não pode fazer o questionario de resolução da prova pois ele ja foi realizado por você antes";

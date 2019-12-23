@@ -19,6 +19,7 @@
 
               function bini(idQ,texto) {
                 document.getElementById(idQ).innerHTML = texto;
+                //document.getElementById(idQ).style = "color:blue;";
                 //alert("oi");
               }
 
