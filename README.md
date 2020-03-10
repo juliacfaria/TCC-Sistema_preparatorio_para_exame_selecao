@@ -25,4 +25,4 @@
 	<h2>Estruturação do código</h2>
 	<h4 style="text-indent: 20px;">Este código foi estruturado em MVC</h4>
 	<h4 style="text-indent: 20px;">A pasta "controller" contém os arquivos PHP, que incluem em seus escopos os arquivos da pasta "view", que contém a interface da página em arquivos TPL. As demais pastas são autoexplicativas</h4>
-	h4 style="text-indent: 20px;">Este projeto foi o TCC de um grupo do curso técnico em informática da UFV-Campus Florestal. Integrantes: Júlia Costa, Wagner Alves, Ana Júlia e Gabriel Heleno.</h4>
+	<h4 style="text-indent: 20px;">Este projeto foi o TCC de um grupo do curso técnico em informática da UFV-Campus Florestal. Integrantes: Júlia Costa, Wagner Alves, Ana Júlia e Gabriel Heleno.</h4>
